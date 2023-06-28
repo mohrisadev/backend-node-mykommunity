@@ -1,0 +1,29 @@
+version: '3.6'
+services:
+  graphql-engine:
+    image: hasura/graphql-engine:v2.16.1
+    ports:
+      - '8084:8080'
+    restart: always
+    environment:
+      # Set Hasura env
+      HASURA_GRAPHQL_DATABASE_URL: $DATABASE_URL
+      # HASURA_GRAPHQL_ENABLE_CONSOLE: 'false'
+
+  redis:
+    image: redis
+    container_name: redis
+    command: redis-server --appendonly yes
+    ports:
+      - "6379:6379"
+    networks:
+      - tokenmonk-dev
+    volumes:
+      - redis_data:/data%
+
+networks:
+  tokenmonk-dev:
+    driver: bridge
+  
+volumes:
+  redis_data:

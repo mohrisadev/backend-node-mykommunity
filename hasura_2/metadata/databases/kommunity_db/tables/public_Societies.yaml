@@ -1,0 +1,85 @@
+table:
+  name: Societies
+  schema: public
+object_relationships:
+- name: City
+  using:
+    foreign_key_constraint_on: cityId
+array_relationships:
+- name: Amenities
+  using:
+    foreign_key_constraint_on:
+      column: societyId
+      table:
+        name: Amenities
+        schema: public
+- name: Blocks
+  using:
+    foreign_key_constraint_on:
+      column: societyId
+      table:
+        name: Blocks
+        schema: public
+- name: Complaints
+  using:
+    foreign_key_constraint_on:
+      column: societyId
+      table:
+        name: Complaints
+        schema: public
+- name: EmergencyContacts
+  using:
+    foreign_key_constraint_on:
+      column: societyId
+      table:
+        name: EmergencyContacts
+        schema: public
+- name: Gates
+  using:
+    foreign_key_constraint_on:
+      column: societyId
+      table:
+        name: Gates
+        schema: public
+- name: NoteToGuards
+  using:
+    foreign_key_constraint_on:
+      column: societyId
+      table:
+        name: NoteToGuard
+        schema: public
+- name: Notices
+  using:
+    foreign_key_constraint_on:
+      column: societyId
+      table:
+        name: Notices
+        schema: public
+- name: RentalUnits
+  using:
+    foreign_key_constraint_on:
+      column: societyId
+      table:
+        name: RentalUnits
+        schema: public
+- name: SocietyImages
+  using:
+    foreign_key_constraint_on:
+      column: societyId
+      table:
+        name: SocietyImages
+        schema: public
+- name: Sos
+  using:
+    foreign_key_constraint_on:
+      column: societyId
+      table:
+        name: Sos
+        schema: public
+- name: UserRoles
+  using:
+    foreign_key_constraint_on:
+      column: societyId
+      table:
+        name: UserRoles
+        schema: public

@@ -1,0 +1,15 @@
+table:
+  name: Blocks
+  schema: public
+object_relationships:
+- name: Society
+  using:
+    foreign_key_constraint_on: societyId
+array_relationships:
+- name: Floors
+  using:
+    foreign_key_constraint_on:
+      column: blockId
+      table:
+        name: Floors
+        schema: public

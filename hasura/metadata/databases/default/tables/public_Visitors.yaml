@@ -1,0 +1,18 @@
+table:
+  name: Visitors
+  schema: public
+object_relationships:
+- name: RentalUnit
+  using:
+    foreign_key_constraint_on: rentalUnitId
+- name: User
+  using:
+    foreign_key_constraint_on: parcelCollectedBy
+array_relationships:
+- name: VisitorStatuses
+  using:
+    foreign_key_constraint_on:
+      column: visitorId
+      table:
+        name: VisitorStatus
+        schema: public

@@ -1,0 +1,13 @@
+table:
+  name: BookedAmenity
+  schema: public
+object_relationships:
+- name: Amenity
+  using:
+    foreign_key_constraint_on: amenityId
+- name: RentalUnit
+  using:
+    foreign_key_constraint_on: rentalUnitId
+- name: User
+  using:
+    foreign_key_constraint_on: userId

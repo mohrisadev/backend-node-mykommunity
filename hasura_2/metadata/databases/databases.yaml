@@ -1,0 +1,8 @@
+- name: kommunity_db
+  kind: postgres
+  configuration:
+    connection_info:
+      use_prepared_statements: false
+      database_url: postgres://postgres:your_password@host.docker.internal:5432/kommunity_db
+      isolation_level: read-committed
+  tables: "!include kommunity_db/tables/tables.yaml"

@@ -1,0 +1,7 @@
+table:
+  name: AmenityImages
+  schema: public
+object_relationships:
+- name: Amenity
+  using:
+    foreign_key_constraint_on: amenityId

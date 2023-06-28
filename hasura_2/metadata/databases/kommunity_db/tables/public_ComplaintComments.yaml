@@ -1,0 +1,10 @@
+table:
+  name: ComplaintComments
+  schema: public
+object_relationships:
+- name: Complaint
+  using:
+    foreign_key_constraint_on: complaintId
+- name: User
+  using:
+    foreign_key_constraint_on: userId

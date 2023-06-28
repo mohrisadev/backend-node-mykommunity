@@ -1,0 +1,11 @@
+table:
+  name: LocalServices
+  schema: public
+array_relationships:
+- name: LocalServiceProviders
+  using:
+    foreign_key_constraint_on:
+      column: localServiceId
+      table:
+        name: LocalServiceProviders
+        schema: public

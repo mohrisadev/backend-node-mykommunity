@@ -1,0 +1,24 @@
+table:
+  name: UserRoles
+  schema: public
+object_relationships:
+- name: Gate
+  using:
+    foreign_key_constraint_on: guardGateId
+- name: RentalUnit
+  using:
+    foreign_key_constraint_on: rentalUnitId
+- name: Society
+  using:
+    foreign_key_constraint_on: societyId
+- name: User
+  using:
+    foreign_key_constraint_on: userId
+array_relationships:
+- name: UserRoleStatuses
+  using:
+    foreign_key_constraint_on:
+      column: userRoleId
+      table:
+        name: UserRoleStatus
+        schema: public

@@ -1,0 +1,7 @@
+table:
+  name: LocalServiceProviderLogs
+  schema: public
+object_relationships:
+- name: LocalServiceProvider
+  using:
+    foreign_key_constraint_on: localServiceProviderId

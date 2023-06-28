@@ -1,0 +1,60 @@
+table:
+  name: Users
+  schema: public
+array_relationships:
+- name: BookedAmenities
+  using:
+    foreign_key_constraint_on:
+      column: userId
+      table:
+        name: BookedAmenity
+        schema: public
+- name: ComplaintComments
+  using:
+    foreign_key_constraint_on:
+      column: userId
+      table:
+        name: ComplaintComments
+        schema: public
+- name: Complaints
+  using:
+    foreign_key_constraint_on:
+      column: userId
+      table:
+        name: Complaints
+        schema: public
+- name: LocalServiceProviderAttendances
+  using:
+    foreign_key_constraint_on:
+      column: userId
+      table:
+        name: LocalServiceProviderAttendance
+        schema: public
+- name: NoteToGuards
+  using:
+    foreign_key_constraint_on:
+      column: userId
+      table:
+        name: NoteToGuard
+        schema: public
+- name: Notices
+  using:
+    foreign_key_constraint_on:
+      column: userId
+      table:
+        name: Notices
+        schema: public
+- name: Sos
+  using:
+    foreign_key_constraint_on:
+      column: userId
+      table:
+        name: Sos
+        schema: public
+- name: UserRoles
+  using:
+    foreign_key_constraint_on:
+      column: userId
+      table:
+        name: UserRoles
+        schema: public

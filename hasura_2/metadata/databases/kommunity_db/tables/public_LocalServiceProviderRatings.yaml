@@ -1,0 +1,10 @@
+table:
+  name: LocalServiceProviderRatings
+  schema: public
+object_relationships:
+- name: LocalServiceProvider
+  using:
+    foreign_key_constraint_on: localServiceProviderId
+- name: RentalUnit
+  using:
+    foreign_key_constraint_on: rentalUnitId

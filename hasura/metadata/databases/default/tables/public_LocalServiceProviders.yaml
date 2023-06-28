@@ -1,0 +1,36 @@
+table:
+  name: LocalServiceProviders
+  schema: public
+object_relationships:
+- name: LocalService
+  using:
+    foreign_key_constraint_on: localServiceId
+array_relationships:
+- name: LocalServiceProviderAndRentalUnits
+  using:
+    foreign_key_constraint_on:
+      column: localServiceProviderId
+      table:
+        name: LocalServiceProviderAndRentalUnits
+        schema: public
+- name: LocalServiceProviderAttendances
+  using:
+    foreign_key_constraint_on:
+      column: localServiceProviderId
+      table:
+        name: LocalServiceProviderAttendance
+        schema: public
+- name: LocalServiceProviderLogs
+  using:
+    foreign_key_constraint_on:
+      column: localServiceProviderId
+      table:
+        name: LocalServiceProviderLogs
+        schema: public
+- name: LocalServiceProviderRatings
+  using:
+    foreign_key_constraint_on:
+      column: localServiceProviderId
+      table:
+        name: LocalServiceProviderRatings
+        schema: public

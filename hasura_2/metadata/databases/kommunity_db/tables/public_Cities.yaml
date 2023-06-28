@@ -1,0 +1,15 @@
+table:
+  name: Cities
+  schema: public
+object_relationships:
+- name: State
+  using:
+    foreign_key_constraint_on: stateId
+array_relationships:
+- name: Societies
+  using:
+    foreign_key_constraint_on:
+      column: cityId
+      table:
+        name: Societies
+        schema: public

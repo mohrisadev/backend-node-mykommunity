@@ -1,0 +1,7 @@
+table:
+  name: SosStatus
+  schema: public
+object_relationships:
+- name: So
+  using:
+    foreign_key_constraint_on: sosId

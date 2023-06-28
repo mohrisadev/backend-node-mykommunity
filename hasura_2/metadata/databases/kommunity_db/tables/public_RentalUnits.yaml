@@ -1,0 +1,67 @@
+table:
+  name: RentalUnits
+  schema: public
+object_relationships:
+- name: Floor
+  using:
+    foreign_key_constraint_on: floorId
+- name: Society
+  using:
+    foreign_key_constraint_on: societyId
+array_relationships:
+- name: BookedAmenities
+  using:
+    foreign_key_constraint_on:
+      column: rentalUnitId
+      table:
+        name: BookedAmenity
+        schema: public
+- name: Complaints
+  using:
+    foreign_key_constraint_on:
+      column: rentalUnitId
+      table:
+        name: Complaints
+        schema: public
+- name: LocalServiceProviderAndRentalUnits
+  using:
+    foreign_key_constraint_on:
+      column: rentalUnitId
+      table:
+        name: LocalServiceProviderAndRentalUnits
+        schema: public
+- name: LocalServiceProviderAttendances
+  using:
+    foreign_key_constraint_on:
+      column: rentalUnitId
+      table:
+        name: LocalServiceProviderAttendance
+        schema: public
+- name: LocalServiceProviderRatings
+  using:
+    foreign_key_constraint_on:
+      column: rentalUnitId
+      table:
+        name: LocalServiceProviderRatings
+        schema: public
+- name: NoteToGuards
+  using:
+    foreign_key_constraint_on:
+      column: rentalUnitId
+      table:
+        name: NoteToGuard
+        schema: public
+- name: Sos
+  using:
+    foreign_key_constraint_on:
+      column: rentalUnitId
+      table:
+        name: Sos
+        schema: public
+- name: UserRoles
+  using:
+    foreign_key_constraint_on:
+      column: rentalUnitId
+      table:
+        name: UserRoles
+        schema: public

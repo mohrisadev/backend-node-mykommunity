@@ -1,0 +1,31 @@
+table:
+  name: Complaints
+  schema: public
+object_relationships:
+- name: ComplaintCategory
+  using:
+    foreign_key_constraint_on: categoryId
+- name: RentalUnit
+  using:
+    foreign_key_constraint_on: rentalUnitId
+- name: Society
+  using:
+    foreign_key_constraint_on: societyId
+- name: User
+  using:
+    foreign_key_constraint_on: userId
+array_relationships:
+- name: ComplaintComments
+  using:
+    foreign_key_constraint_on:
+      column: complaintId
+      table:
+        name: ComplaintComments
+        schema: public
+- name: ComplaintStatuses
+  using:
+    foreign_key_constraint_on:
+      column: complaintId
+      table:
+        name: ComplaintStatus
+        schema: public

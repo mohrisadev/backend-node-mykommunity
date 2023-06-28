@@ -1,0 +1,11 @@
+table:
+  name: ComplaintCategories
+  schema: public
+array_relationships:
+- name: Complaints
+  using:
+    foreign_key_constraint_on:
+      column: categoryId
+      table:
+        name: Complaints
+        schema: public

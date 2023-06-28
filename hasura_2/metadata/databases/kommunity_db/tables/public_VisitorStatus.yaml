@@ -1,0 +1,10 @@
+table:
+  name: VisitorStatus
+  schema: public
+object_relationships:
+- name: User
+  using:
+    foreign_key_constraint_on: actionByUserId
+- name: Visitor
+  using:
+    foreign_key_constraint_on: visitorId

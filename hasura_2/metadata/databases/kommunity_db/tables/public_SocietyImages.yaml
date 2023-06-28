@@ -1,0 +1,7 @@
+table:
+  name: SocietyImages
+  schema: public
+object_relationships:
+- name: Society
+  using:
+    foreign_key_constraint_on: societyId

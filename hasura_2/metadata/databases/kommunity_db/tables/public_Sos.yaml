@@ -1,0 +1,21 @@
+table:
+  name: Sos
+  schema: public
+object_relationships:
+- name: RentalUnit
+  using:
+    foreign_key_constraint_on: rentalUnitId
+- name: Society
+  using:
+    foreign_key_constraint_on: societyId
+- name: User
+  using:
+    foreign_key_constraint_on: userId
+array_relationships:
+- name: SosStatuses
+  using:
+    foreign_key_constraint_on:
+      column: sosId
+      table:
+        name: SosStatus
+        schema: public

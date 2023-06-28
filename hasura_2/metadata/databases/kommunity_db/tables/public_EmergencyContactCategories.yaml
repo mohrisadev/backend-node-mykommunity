@@ -1,0 +1,11 @@
+table:
+  name: EmergencyContactCategories
+  schema: public
+array_relationships:
+- name: EmergencyContacts
+  using:
+    foreign_key_constraint_on:
+      column: emergencyContactCategoryId
+      table:
+        name: EmergencyContacts
+        schema: public
